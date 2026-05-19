@@ -2,11 +2,11 @@
 
 ## 1. Contexto y objetivo
 
-El proyecto implementa un agente funcional para una mesa de ayuda organizacional. Su objetivo es automatizar la atención inicial de solicitudes de soporte, recuperando información desde una base de conocimiento, manteniendo memoria de contexto y tomando decisiones sobre si responder, crear ticket o derivar a soporte humano.
+El objetivo es implementar un agente funcional para una mesa de ayuda. Su objetivo es automatizar la atención inicial de solicitudes de soporte, recuperando información desde una base de conocimiento, manteniendo memoria de contexto y tomando decisiones sobre si responder, crear ticket o derivar a soporte humano.
 
 ## 2. Diseño e implementación del agente
 
-El agente fue implementado en Python utilizando LangGraph para la orquestación del flujo y LangChain Tools para definir herramientas autónomas. El flujo considera carga de memoria, clasificación de solicitud, recuperación semántica, evaluación de confianza, planificación de tareas, ejecución de acciones y persistencia del resultado.
+El agente fue implementado en Python utilizando LangGraph para el flujo y LangChain Tools para definir herramientas. El flujo considera carga de memoria, clasificación de solicitud, recuperación semántica, evaluación de confianza, planificación de tareas, ejecución de acciones y persistencia del resultado.
 
 Las herramientas configuradas son: consulta de base de conocimiento, evaluación de prioridad, resumen de caso, creación de ticket y derivación humana. Estas herramientas permiten que el agente ejecute funciones específicas según el estado de cada solicitud.
 
