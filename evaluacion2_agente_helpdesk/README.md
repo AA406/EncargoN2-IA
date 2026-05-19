@@ -1,12 +1,8 @@
-# Evaluación Parcial 2 - Agente Helpdesk Inteligente
+# Evaluación Parcial 2
 
-Repositorio para la **Evaluación Parcial N°2: Desarrollo de un Agente Funcional** de la asignatura **ISY0101 - Optativo Ingeniería de Soluciones con IA**.
 
-El proyecto implementa un agente funcional de Helpdesk capaz de consultar una base de conocimiento, recuperar contexto semántico, usar memoria de conversación, planificar tareas, tomar decisiones adaptativas y registrar tickets cuando la respuesta automática no es suficiente.
 
----
-
-## 1. Objetivo del agente
+## 1. Objetivo 
 
 Automatizar la atención inicial de consultas de soporte interno para una organización simulada llamada **Implementos**, permitiendo:
 
@@ -19,9 +15,9 @@ Automatizar la atención inicial de consultas de soporte interno para una organi
 
 ---
 
-## 2. Arquitectura general
+## 2. Arquitectura
 
-El agente se compone de los siguientes módulos:
+se compone de los siguientes módulos:
 
 | Componente | Archivo | Función |
 |---|---|---|
