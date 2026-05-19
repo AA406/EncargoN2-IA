@@ -4,7 +4,7 @@ Consulta: seguimiento de un caso anterior.
 
 Resultado esperado: el agente consulta memoria reciente y registra continuidad del flujo.
 
-Para generar evidencia real ejecutar:
+Para generar evidencia real porfavor tiene que ejecutar:
 
 ```bash
 python scripts/export_evidence.py
