@@ -1,0 +1,40 @@
+flowchart TD
+    A[Usuario] --> B[Interfaz CLI / app.py]
+    B --> C[Agente Helpdesk / LangGraph]
+    C --> D[Cargar memoria corta]
+    D --> E[Clasificar solicitud]
+    E --> F[Recuperar contexto semántico]
+    F --> G[Evaluar confianza y prioridad]
+    G --> H{Política de decisión}
+    H -->|Confianza alta| I[Responder con contexto]
+    H -->|Confianza media| J[Responder + crear ticket]
+    H -->|Crítico o baja confianza| K[Crear ticket + derivar humano]
+    I --> L[Guardar memoria corta y larga]
+    J --> L
+    K --> L
+    L --> M[Respuesta final al usuario]
+
+    subgraph Herramientas del agente
+        T1[consultar_base_conocimiento]
+        T2[evaluar_prioridad]
+        T3[resumir_caso]
+        T4[crear_ticket_soporte]
+        T5[derivar_a_humano]
+    end
+
+    C -. usa .-> T1
+    C -. usa .-> T2
+    C -. usa .-> T3
+    C -. usa .-> T4
+    C -. usa .-> T5
+
+    subgraph Persistencia
+        P1[(ChromaDB / Vector Store)]
+        P2[(Memoria JSONL)]
+        P3[(Tickets JSONL)]
+    end
+
+    F --> P1
+    L --> P2
+    J --> P3
+    K --> P3
